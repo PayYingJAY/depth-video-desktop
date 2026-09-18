@@ -1,0 +1,11 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深度视频</title>
+<link rel="stylesheet" href="style.css"><body>
+<header><span class="mark">◒</span><h1>深度视频</h1><span class="local">本机处理 · 无需 API Key</span></header>
+<main><aside><section><div class="step">01 / 导入</div><h2>选择一段视频</h2><p>将整段画面转换为灰度深度视频。</p><button id="pick" class="pick">＋ 选择视频</button><div id="filename" class="filename">尚未选择视频</div></section>
+<section><div class="step">02 / 处理</div><h2>选择处理模式</h2><label><input type="radio" name="mode" value="15" checked><span><strong>快速处理</strong><small>约 15 帧/秒，适合先看效果</small></span></label><label><input type="radio" name="mode" value="0"><span><strong>保留原帧率</strong><small>动作更连贯，处理时间更长</small></span></label></section>
+<div class="actions"><button id="start" class="primary" disabled>开始处理</button><button id="cancel" hidden>取消处理</button><p class="hint">视频留在本机，原片不会修改。<br>首次使用会自动下载运行环境。</p></div></aside>
+<article><div class="previewhead"><h2>画面预览</h2><div class="tabs" role="group" aria-label="预览内容"><button id="original" class="active" aria-pressed="true">原视频</button><button id="result" disabled aria-pressed="false">深度结果</button></div></div>
+<div class="stage"><div id="empty"><span class="frame">▧</span><h3>从一段视频开始</h3><p>选择视频后，在这里预览原片与处理结果</p></div><video id="video" controls playsinline hidden></video><div id="previewerror" hidden>此视频无法在窗口中预览，仍可尝试处理。</div></div>
+<div class="below"><span id="caption">支持 MP4、MOV、MKV、AVI、WebM</span><button id="folder" disabled>打开结果文件夹 ↗</button></div>
+<footer><div class="statusline"><strong id="status" role="status">准备就绪</strong><span id="elapsed"></span></div><progress id="progress" max="100" value="0" aria-label="处理进度"></progress><div class="footnote"><span id="detail">选择视频，然后点击「开始处理」</span><button id="logs" class="text">查看日志</button></div></footer>
+</article></main><script src="app.js"></script></body></html>
