@@ -4,6 +4,10 @@
 
 无需 Codex、API Key 或 ComfyUI。首次联网准备运行环境，此后可以离线处理。视频不会上传到服务器。
 
+**[下载 Windows x64 v1.1（推荐，内含模型）](https://github.com/PayYingJAY/depth-video-desktop/releases/download/v1.1/DepthVideo-Desktop-v1.1-Windows-x64.zip)** · [所有下载 / 更新说明](https://github.com/PayYingJAY/depth-video-desktop/releases/tag/v1.1) · [快速上手](QUICKSTART.md)
+
+这是解压即用的便携包。首次仍需联网下载 Python 和推理依赖；GitHub 的 Source code.zip 不是可直接运行的发行包。
+
 ## 使用
 
 下载发行版，完整解压，双击 `DepthVideo.exe`。选择视频和处理模式，点击「开始处理」。完成后可切换原片 / 深度结果，或打开结果文件夹。
@@ -34,7 +38,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\build.ps1
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\package.ps1
 ```
 
-该 ZIP 不带模型和 Python 运行环境；首次运行需联网下载。源码仓库不包含预编译 DLL、EXE、模型权重、测试视频或用户日志。
+默认生成 `dist/DepthVideo-Desktop-v1.1-lite.zip`，不带模型和 Python 运行环境。要生成含模型的推荐包，先运行 `scripts/download-model.ps1`，再运行 `scripts/package.ps1 -WithModel`。运行 `scripts/verify-packages.ps1` 可检查两种包和模型校验值。源码仓库不包含预编译 DLL、EXE、模型权重、测试视频或用户日志。
 
 ## 文件结构
 

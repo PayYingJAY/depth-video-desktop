@@ -12,6 +12,10 @@ using System.Windows.Forms;
 using Microsoft.Web.WebView2.Core;
 using Microsoft.Web.WebView2.WinForms;
 
+[assembly: System.Reflection.AssemblyVersion("1.1.0.0")]
+[assembly: System.Reflection.AssemblyFileVersion("1.1.0.0")]
+[assembly: System.Reflection.AssemblyProduct("Depth Video Desktop")]
+
 class DepthWindow : Form {
     readonly string root=AppDomain.CurrentDomain.BaseDirectory;
     readonly string data=Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"DepthVideoDesktop");
